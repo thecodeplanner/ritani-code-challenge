@@ -11,7 +11,7 @@ function App() {
   // console.log(user)
 
   return (
-    <div>
+    <div >
       <header>
       <Icon name='github' /> GitHub Username Finder  
       </header>

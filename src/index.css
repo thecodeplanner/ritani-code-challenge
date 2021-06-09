@@ -44,7 +44,11 @@ header {
 }
 
 #followerslist {
-  padding: 20px;
+  padding: 30px;
+}
+
+#followerdiv {
+  margin: 10px;
 }
 
 /* used ID to override font styles */
@@ -55,4 +59,10 @@ header {
 
 #foundname{
   font-family: 'Roboto Mono';
+}
+
+#followerusername {
+  font-family: 'Montserrat';
+  font-size: 12px;
+  text-decoration:  underline;
 }

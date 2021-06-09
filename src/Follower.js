@@ -1,8 +1,8 @@
 function Follower({name, img}) {
     return (
-        <div className='ui segments'>
-            <h3>@{name}</h3>
-            <img className='followerphoto' src={img}></img>
+        <div id='followerdiv' className='ui segments'>
+            <h2 id='followerusername'>@{name}</h2>
+            <img className='followerphoto' alt='follower avatar photo' src={img}></img>
         </div>
     )
 }
