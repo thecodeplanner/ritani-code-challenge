@@ -8,5 +8,5 @@ This project was built as a single page React app, using the [GitHub API](https:
 
 
 ## Demo
-Feel free to try my demo!
+Feel free to try my demo [here](https://main.d1wrl2f96awmgl.amplifyapp.com/)!
 
