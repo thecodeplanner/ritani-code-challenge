@@ -5,6 +5,7 @@ function FollowersList({followersInfo, page, setNextPage}) {
         let followerDetails = followersInfo.map(follower => {
             return (<Follower key={follower.login} name={follower.login} img={follower.avatar_url}/>)
         })
+
     
         function handleMoreFollowers(){
             setNextPage(page + 1)
@@ -13,7 +14,8 @@ function FollowersList({followersInfo, page, setNextPage}) {
     return (
         <div>
             {followerDetails}
-            <button onClick={handleMoreFollowers}>Load More Followers</button>
+            {(followersInfo.length < 50) ? null : <button onClick={handleMoreFollowers}>Load More Followers</button>}
+            {/* <button onClick={handleMoreFollowers}>Load More Followers</button> */}
           
         </div>
     )
