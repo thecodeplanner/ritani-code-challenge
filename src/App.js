@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react'
+import Search from './Search'
+import UserInfo from './UserInfo'
 
 function App() {
+  const [user, setUser] = useState('')
+
+  // console.log(user)
+
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        GitHub Username Search Engine
       </header>
+      <Search setUser={setUser} />
+      <UserInfo username={user.login} name={user.name} followerCount={user.followers}/>
     </div>
   );
 }
