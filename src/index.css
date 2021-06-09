@@ -24,3 +24,20 @@ header {
 .searchbox {
   text-align: center;
 }
+
+.userinfo {
+  font-family: 'Roboto Mono';
+  padding: 20px;
+  text-align: center;
+}
+
+.photo {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+}
+
+.followerphoto {
+  height: 100px;
+  width: 100px;
+}

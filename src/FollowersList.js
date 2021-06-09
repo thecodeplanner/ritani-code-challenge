@@ -12,7 +12,7 @@ function FollowersList({followersInfo, page, setNextPage}) {
             console.log(page)
         }
     return (
-        <div>
+        <div >
             {followerDetails}
             {(followersInfo.length < 50) ? null : <button onClick={handleMoreFollowers}>Load More Followers</button>}
             {/* <button onClick={handleMoreFollowers}>Load More Followers</button> */}
