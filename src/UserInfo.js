@@ -19,6 +19,9 @@ function UserInfo({username, name, followerCount, avatar, setUser}) {
         <div className='userinfo'>
             <h1 id='foundtext'>Yay! We found @{username}!</h1>
             <img className='photo' src={avatar} />
+            <div>
+                <a className='link' target='_blank' href={'https://github.com/'+username}> view profile </a>
+            </div>
             <h3 id='foundname'>His/Her name is: {name}</h3>
             <Menu compact>
                 <Menu.Item as='a'>
