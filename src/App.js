@@ -3,6 +3,7 @@ import './App.css';
 import React, {useState} from 'react'
 import Search from './Search'
 import UserInfo from './UserInfo'
+import {Icon} from 'semantic-ui-react'
 
 function App() {
   const [user, setUser] = useState(null)
@@ -11,8 +12,8 @@ function App() {
 
   return (
     <div>
-      <header className="App-header">
-        GitHub Username Search Engine
+      <header>
+      <Icon name='github' /> GitHub Username Finder  
       </header>
       <Search setUser={setUser} />
       {user !== null ? <UserInfo username={user.login} name={user.name} followerCount={user.followers}/> : null }
