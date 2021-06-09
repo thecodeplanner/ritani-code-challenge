@@ -8,7 +8,7 @@ import {Icon} from 'semantic-ui-react'
 function App() {
   const [user, setUser] = useState(null)
 
-  console.log(user)
+  // console.log(user)
 
   return (
     <div>

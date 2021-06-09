@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {Form} from 'semantic-ui-react'
 
 function Search({setUser}) {
     const [username, setUsername] = useState('')
@@ -23,20 +24,19 @@ function Search({setUser}) {
 
     }
     return (
-        <>
-        <h1>Find a user ...</h1>
-        <form onSubmit ={handleSubmit}>
+        <div className='searchbox'>
+        {/* <h1>Find a user ...</h1> */}
+        <Form onSubmit ={handleSubmit}>
+            <Form.Field inline>
             <input 
             type='text'
-            placeholder='search for username'
+            placeholder='search for username ...'
             onChange={(e) => setUsername(e.target.value)}>
             </input>
-            <input
-            type='submit'
-            name='search'>
-            </input>
-        </form>
-        </>
+            </Form.Field>
+            <Form.Button content='Find User'/>
+        </Form>
+        </div>
     )
 }
 
