@@ -16,7 +16,7 @@ function App() {
       <Icon name='github' /> GitHub Username Finder  
       </header>
       <Search setUser={setUser} />
-      {user !== null ? <UserInfo username={user.login} name={user.name} avatar={user.avatar_url}followerCount={user.followers}/> : null }
+      {user !== null ? <UserInfo username={user.login} name={user.name} avatar={user.avatar_url}followerCount={user.followers} setUser={setUser}/> : null }
     </div>
   );
 }

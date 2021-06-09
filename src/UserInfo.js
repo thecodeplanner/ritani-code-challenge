@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import FollowersList from './FollowersList'
 import {Icon, Label, Menu} from 'semantic-ui-react'
 
-function UserInfo({username, name, followerCount, avatar}) {
+function UserInfo({username, name, followerCount, avatar, setUser}) {
     const [followersInfo, setFollowersInfo] = useState(null)
     const [page, setNextPage] = useState(1)
 
@@ -29,7 +29,7 @@ function UserInfo({username, name, followerCount, avatar}) {
                 </Menu>
             
             {/* <button onClick={handleOnClick}>Show Followers</button> */}
-            {followersInfo ? <FollowersList followersInfo={followersInfo} page={page} setNextPage={setNextPage} /> : null }
+            {followersInfo ? <FollowersList followersInfo={followersInfo} page={page} setNextPage={setNextPage} setUser={setUser}/> : null }
             
         </div>
 

@@ -1,10 +1,10 @@
 import Follower from './Follower'
 import {Button} from 'semantic-ui-react'
 
-function FollowersList({followersInfo, page, setNextPage}) {
+function FollowersList({followersInfo, page, setNextPage, setUser}) {
 
         let followerDetails = followersInfo.map(follower => {
-            return (<Follower key={follower.login} name={follower.login} img={follower.avatar_url}/>)
+            return (<Follower key={follower.login} name={follower.login} img={follower.avatar_url} setUser={setUser}/>)
         })
 
     
