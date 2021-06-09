@@ -51,6 +51,11 @@ header {
   margin: 10px;
 }
 
+#followerdiv:hover {
+  cursor: pointer;
+  background-color: rgb(89, 69, 216);
+}
+
 /* used ID to override font styles */
 
 #foundtext {
@@ -66,3 +71,7 @@ header {
   font-size: 12px;
   text-decoration:  underline;
 }
+
+/* #followerusername:hover {
+  color: white;
+} */
