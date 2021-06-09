@@ -1,4 +1,3 @@
-
 import React, {useState} from 'react'
 import Search from './Search'
 import UserInfo from './UserInfo'
