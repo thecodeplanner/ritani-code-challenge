@@ -1,4 +1,5 @@
 import Follower from './Follower'
+import {Button} from 'semantic-ui-react'
 
 function FollowersList({followersInfo, page, setNextPage}) {
 
@@ -12,12 +13,14 @@ function FollowersList({followersInfo, page, setNextPage}) {
             console.log(page)
         }
     return (
-        <div >
-            {followerDetails}
-            {(followersInfo.length < 50) ? null : <button onClick={handleMoreFollowers}>Load More Followers</button>}
-            {/* <button onClick={handleMoreFollowers}>Load More Followers</button> */}
-          
+        <>
+        <div className='ui centered grid' id='followerslist'>
+            {followerDetails}          
         </div>
+        <div>
+        {(followersInfo.length < 50) ? null : <Button basic color='violet' onClick={handleMoreFollowers}>Load More Followers</Button>}
+        </div>
+        </>
     )
 
     }

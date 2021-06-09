@@ -34,7 +34,7 @@ function Search({setUser}) {
             onChange={(e) => setUsername(e.target.value)}>
             </input>
             </Form.Field>
-            <Form.Button content='Find User'/>
+            <Form.Button size='tiny' color='violet' content='Find User'/>
         </Form>
         </div>
     )
