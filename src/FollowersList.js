@@ -1,6 +1,6 @@
 import Follower from './Follower'
 
-function FollowersList({followersInfo, page, setNextPage, handleNextPage}) {
+function FollowersList({followersInfo, page, setNextPage}) {
 
         let followerDetails = followersInfo.map(follower => {
             return (<Follower key={follower.login} name={follower.login} img={follower.avatar_url}/>)
@@ -8,7 +8,7 @@ function FollowersList({followersInfo, page, setNextPage, handleNextPage}) {
     
         function handleMoreFollowers(){
             setNextPage(page + 1)
-            handleNextPage()
+            console.log(page)
         }
     return (
         <div>

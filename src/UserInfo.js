@@ -1,17 +1,30 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import FollowersList from './FollowersList'
 
 function UserInfo({username, name, followerCount}) {
     const [followersInfo, setFollowersInfo] = useState(null)
     const [page, setNextPage] = useState(1)
 
-    function handleOnClick() {
+    useEffect(() => {
         fetch(`https://api.github.com/users/${username}/followers?page=${page}&per_page=50`)
-            .then(res => res.json())
-            .then(data => setFollowersInfo(data))
-        
-    }
+        .then(res => res.json())
+        .then(data => setFollowersInfo(data))
+    }, [page])
 
+    // function handleOnClick() {
+    //     useEffect(() => {
+    //         fetch(`https://api.github.com/users/${username}/followers?page=${page}&per_page=50`)
+    //         .then(res => res.json())
+    //         .then(data => setFollowersInfo(data))
+    //     }, [page])
+
+
+    //     // fetch(`https://api.github.com/users/${username}/followers?page=${page}&per_page=50`)
+    //     //     .then(res => res.json())
+    //     //     .then(data => setFollowersInfo(data))
+        
+    // }
+    console.log(page)
     // console.log(followersInfo)
 
     
@@ -21,8 +34,8 @@ function UserInfo({username, name, followerCount}) {
             <h2>Name: {name}</h2>
             <h2>Total Followers: {followerCount}</h2>
             
-            <button onClick={handleOnClick}>Show Followers</button>
-            {followersInfo ? <FollowersList followersInfo={followersInfo} page={page} setNextPage={setNextPage} handleNextPage={handleOnClick}/> : null }
+            {/* <button onClick={handleOnClick}>Show Followers</button> */}
+            {followersInfo ? <FollowersList followersInfo={followersInfo} page={page} setNextPage={setNextPage} /> : null }
             
         </div>
 
