@@ -9,23 +9,9 @@ function UserInfo({username, name, followerCount}) {
         fetch(`https://api.github.com/users/${username}/followers?page=${page}&per_page=50`)
         .then(res => res.json())
         .then(data => setFollowersInfo(data))
-    }, [page])
+    },[page,username])
 
-    // function handleOnClick() {
-    //     useEffect(() => {
-    //         fetch(`https://api.github.com/users/${username}/followers?page=${page}&per_page=50`)
-    //         .then(res => res.json())
-    //         .then(data => setFollowersInfo(data))
-    //     }, [page])
-
-
-    //     // fetch(`https://api.github.com/users/${username}/followers?page=${page}&per_page=50`)
-    //     //     .then(res => res.json())
-    //     //     .then(data => setFollowersInfo(data))
-        
-    // }
     console.log(page)
-    // console.log(followersInfo)
 
     
     return (

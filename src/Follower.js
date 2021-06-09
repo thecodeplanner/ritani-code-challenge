@@ -2,7 +2,7 @@ function Follower({name, img}) {
     return (
         <>
             <h3>{name}</h3>
-            <img src={img} alt='image'></img>
+            <img src={img}></img>
         </>
     )
 }
