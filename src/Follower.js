@@ -1,5 +1,6 @@
 function Follower({name, img, setUser}) {
 
+    //passed down setUser so that when we click a follower, we can rerender page and see info about follower
     function handleOnClick() {
         fetch(`https://api.github.com/users/${name}`)
         .then(res => res.json())

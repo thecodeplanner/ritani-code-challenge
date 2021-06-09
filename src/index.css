@@ -18,8 +18,11 @@ header {
   font-family: 'Roboto Mono';
   text-align: center;
   font-size: 45px;
+  margin-top: 2em;
   padding: 50px;
 }
+
+/* change color for profile url */
 
 a.link {
   color: rgb(89, 69, 216);
@@ -29,17 +32,17 @@ a.link:hover {
   color: black;
 }
 
-
 .searchbox {
   text-align: center;
 }
 
 .userinfo {
   font-family: 'Roboto Mono';
-  padding: 100px;
+  padding: 50px;
   text-align: center;
 }
 
+/* resize user and follower avatar photo */
 
 .photo {
   height: 200px;
